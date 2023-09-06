@@ -1,0 +1,19 @@
+* {
+    margin: 0; 
+    padding: 0;
+box-sizing: border-box;
+}
+body {background: #6bb7bd; }
+
+.head { 
+    width: 100vw;
+} 
+.container{
+    margin: 0 auto;
+    width: 80%;
+    height: 50% ;
+    border: solid 1px black;
+    background: #3252bb;
+}
+.card-header{ text-align: center;}
+.card-body{ margin: 0 auto;}

@@ -17,5 +17,30 @@
         <h1>Timer: <span class="timer">60</span></h1>
         <h2>score:<span class="score">0</span></h2>
     </div>
+    <div class="container card hidden">
+        <div class="card-header">
+            <h3 class="question">CLick start to Begin</h3>
+        </div>
+        <div class="card-body">
+            <div class="answers "></div>
+            <div class="play-button">
+                <div class="control">
+                    <button class="start btn btn-danger">start</button>
+                    <button type="button" class="btn btn-primary btn-warning" data-toggle="modal"
+                        data-target=".bd-example-modal-sm">Ranking</button>
+                    <form>
+                        <input class="form-control" type="text" id="player" placeholder="player name">
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="modal fade bd-example-modal-sm scores" tabindex="-1" role="dialog"
+                aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="ranking">Last Players:
+                            <ul class="players">
+                            </ul>
 
 </body>
