@@ -56,3 +56,72 @@ function gameOver() {
     }
     controlsContainer.style.display = 'block';
 }
+//clicking
+function next() {
+    questionNumber++;
+    if (questionNumber < quiz.length) {
+        generateQuestion();
+        countEl.textContent = scoreCount;
+    } else {
+        gameOver();
+
+    }
+} 
+
+//Function to make the timer work correct 
+
+function setTime() {
+    if (timerCount > 0) {
+        generateQuestion();
+        var setTime2 = setInterval(function () {
+            timerCount--;
+            if (timerCount < 0 || questionNumber >= 4) {
+                
+                clearInterval(setTime2);
+                gameOver();
+                var storedPlayer = {};
+                storedPlayer.player = playerName;
+                storedPlayer.score = scoreCount;
+                playersList.push(storedPlayer);
+                localStorage.setItem(`playerList`, JSON.stringify(playersList));
+                
+                //calling the "createRanking" with the last player..
+
+                  document.querySelector('.players').textContent = "";
+                playersList.sort(function (a, b) {
+                    return b.score - a.score;
+                });
+                playersList.forEach(createRanking);
+            }
+            timerEl.textContent = timerCount
+        }, 1000)
+    }
+};
+
+//List the ranking
+function createRanking(answer) {
+    var playerLi = answer.player;
+    var scoreLi = answer.score;
+    var player = document.createElement('li');
+    player.innerHTML = `${playerLi}: ${scoreLi}`;
+    document.querySelector('.players').appendChild(player);
+}
+
+//Function for the start button to set everything to default.. 
+function startQuiz() {
+    if (playerInput.value) {
+        timerCount = 60;
+        scoreCount = 0;
+        questionNumber = 0;
+        playerName = playerInput.value
+        playerInput.value = "";
+        controlsContainer.style.display = 'none';
+        setTime();
+
+    } else {
+        alert('You need to type any name to start playing')
+    }
+}
+
+
+
