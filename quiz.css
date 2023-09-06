@@ -3,7 +3,7 @@
     padding: 0;
 box-sizing: border-box;
 }
-body {background: #4f115f; }
+body {background: #1a161b; }
 
 
 
@@ -18,7 +18,7 @@ body {background: #4f115f; }
     width: 80%;
     height: 50% ;
     border: solid 1px black;
-    background: #32bbaf;
+    background: #8d2dc5;
 }
 .card-header{ text-align: center;}
 .card-body{ margin: 0 auto;}
