@@ -3,7 +3,10 @@
     padding: 0;
 box-sizing: border-box;
 }
-body {background: #1a161b; }
+body {
+    background: #1a161b;
+    font-family: monospace;
+}
 
 
 
@@ -22,3 +25,28 @@ body {background: #1a161b; }
 }
 .card-header{ text-align: center;}
 .card-body{ margin: 0 auto;}
+
+.btn { 
+    width: 100%;
+    margin: .3rem;
+    padding: 1rem 1rem;
+}
+
+.correct { background: green;}
+.correct:hover { background: green;}
+.incorrect { background : red;}
+.incorrect:hover { background : red;}
+li { list-style : none;}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        height:25rem;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .container {
+        width: 100vw;
+        height: 70vh;
+
+    }
+}
