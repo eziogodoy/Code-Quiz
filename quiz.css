@@ -3,17 +3,22 @@
     padding: 0;
 box-sizing: border-box;
 }
-body {background: #6bb7bd; }
+body {background: #4f115f; }
+
+
 
 .head { 
     width: 100vw;
+    color: aliceblue;
+    margin: 0%;
+    padding: 2%;
 } 
 .container{
     margin: 0 auto;
     width: 80%;
     height: 50% ;
     border: solid 1px black;
-    background: #3252bb;
+    background: #32bbaf;
 }
 .card-header{ text-align: center;}
 .card-body{ margin: 0 auto;}
