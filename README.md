@@ -5,6 +5,8 @@ On this homeWork we are creating a Quiz , in wich you are asked 4 questions, if 
 ## Files
 contains an index.html file with the structure of my app, a quiz.css giving the styling to my app and we have a quiz.js giving the functionality that it needs.
 
+This is the link of the page: https://eziogodoy.github.io/Code-Quiz/
+
 
 
 
